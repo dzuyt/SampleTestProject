@@ -1,0 +1,46 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Appium Demo Suite" verbose="0" parallel="tests">
+	<listeners>
+		<listener class-name="com.quantum.listerners.QuantumReportiumListener" />		
+		<listener class-name="com.quantum.java.listener.TestNgAnnotations" />
+		<listener class-name="com.quantum.java.listener.TestNGListener" />
+	</listeners>
+    <!-- To use actual AppiumDriver classes defined    -->
+    <!-- by driverClass property in env.resources dirs -->
+    <!-- Set driver.name value to perfectoDriver       -->
+    <parameter name="driver.name" value="perfectoRemoteDriver"/>
+    <!-- <parameter name="perfecto.token" value="eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJlYWY1Y2Q5Yi0zODQ0LTRkMTktODQwNi04NzExNWVmZTFmZDYiLCJleHAiOjAsIm5iZiI6MCwiaWF0IjoxNTAxODU0NTUxLCJpc3MiOiJodHRwczovL2F1dGgucGVyZmVjdG9tb2JpbGUuY29tL2F1dGgvcmVhbG1zL3BzLXBlcmZlY3RvbW9iaWxlLWNvbSIsImF1ZCI6Im9mZmxpbmUtdG9rZW4tZ2VuZXJhdG9yIiwic3ViIjoiYjY3ZTQ4YTgtZTRiYy00NDE3LTgwMjctY2FlYWNjMmE0NTJlIiwidHlwIjoiT2ZmbGluZSIsImF6cCI6Im9mZmxpbmUtdG9rZW4tZ2VuZXJhdG9yIiwic2Vzc2lvbl9zdGF0ZSI6IjgyODAzN2U1LTQ4YjMtNGI1Yy04NWZiLTZlMzRiMTIwYTczOCIsImNsaWVudF9zZXNzaW9uIjoiNGIwZmQzNDQtOGEwMS00MDdlLWIwMDgtN2E2NWFlMmFhOTI5IiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsInZpZXctcHJvZmlsZSJdfX19.b0iFw97LMLufzFUjcFcUitbMem-WWpl1TJsOWF3KrjcA3abq56eivGN7Y82i1Y8XOa5PJg9mPCDIrLfV4n4O85JFQPbydkvQaDsKOiPFu3vLjZXFxyqINC2ehKHOd9RepbIlufHnJoJpBBjyAMO4sb1ucMTMOzVajhYqCxeo-iffyWhJcI9TxVdvFHqg9RgPw9Vl-OsPQsPef7LYt1nsWNDiXbEXzZi4PTt_u5-Fcu7WiVO34vHx2Cmkw6GdSQCHf9elw3BX5nPVMMqMk84nOAvT-6o71zdritOMiUqtvasznUQ3S-DP8mKyH6SXkV374xQOm5owYHUsmgnq1O928g"/> -->
+	<parameter name="project.name" value="PayLah_UI_Verification" />
+    <parameter name="project.ver" value="2.0" />
+	<!-- <parameter name="reportium-job-name" value="Appium Demo Raj" />
+    <parameter name="reportium-job-number" value="5" /> -->
+
+
+   <test name="IOS Calc Test" enabled="true">
+        <parameter name="driver.capabilities.deviceName" value="B319A00253D108F9DFD113C93D7F0C92680175F7"></parameter>
+        <parameter name="env.resources" value="src/main/resources/ios"/>
+        <groups>
+            <run>
+                <include name="@Appium"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.qmetry.qaf.automation.step.client.gherkin.GherkinScenarioFactory"/>
+        </classes>
+    </test>
+     
+  
+    <test name="Android Calc Test" enabled="true">
+       <parameter name="driver.capabilities.deviceName" value="04157DF46308C038"></parameter>   
+       <!--  <parameter name="driver.capabilities.model" value="Galaxy S.*"></parameter> -->
+        <parameter name="env.resources" value="src/main/resources/android"/>
+        <groups>
+            <run>
+                <include name="@Appium"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.qmetry.qaf.automation.step.client.gherkin.GherkinScenarioFactory"/>
+        </classes>
+    </test>
+</suite>

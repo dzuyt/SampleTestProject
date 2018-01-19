@@ -1,0 +1,15 @@
+#locator repository for search page
+btn.search = {\"locator\":\"xpath=(//*[@value='Google Search' or @name='btnG'])[1]\"}
+txt.search = {\"locator\":\"name=q\"}  
+"text/name"
+
+#Assignment-Xpath
+Search.Input=xpath=//*[@id='searchInput']
+Apple.Image=xpath=//*[@class='suggestions-dropdown']//*/p[contains(text(),'fruit of the apple tree')]
+LearnXpath.text=xpath=//*[@id='sectionxs_tutorials']//*[text()='Learn XPath']
+Hamburger.icon=xpath=/html[1]/body[1]/div[5]/a[1]/i
+Tutorial.text=xpath=//*[@class='w3-button w3-block w3-large w3-wide' and text()='TUTORIALS ']
+XMLQuiz.text=xpath=//*[@id='sectionxs_examples']//*[text()='XML Quiz']
+Examples.text=xpath=//*[@class='w3-button w3-block w3-large w3-wide' and text()='EXAMPLES ']
+LearnXML.text=xpath=//*[@id='sectionxs_tutorials']//*[text()='Learn XML']
+Home.button=xpath=//*[@class="topnav-icons fa fa-home w3-left w3-bar-item w3-button']
